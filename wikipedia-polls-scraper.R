@@ -1,6 +1,7 @@
 #import rvest and xml2
 library(rvest)
 library(xml2)
+library(readr)
 
 #define variable to hold url of wikipedia page
 url <- "TK"
@@ -19,3 +20,6 @@ year_polls <- year_polls[[1]]
 
 #check to make sure the table has been scraped correctly
 head(year_polls)
+
+#write data frame into a csv file
+write_csv(year_polls, 'year_polls.csv')
