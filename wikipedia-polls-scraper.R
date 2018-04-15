@@ -1,4 +1,4 @@
-#import rvest and xml2
+#import rvest, xml2 and readr
 library(rvest)
 library(xml2)
 library(readr)
