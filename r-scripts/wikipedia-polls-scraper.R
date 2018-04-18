@@ -3,7 +3,7 @@ library(rvest)
 library(xml2)
 library(readr)
 
-#define variable to hold url of wikipedia page
+#create variable to hold url of wikipedia page
 url <- "TK"
 
 #create new variable to hold table of polls 
