@@ -1,4 +1,4 @@
-//combine the six party adjustment functions so they can be run with one click//
+//combine the six party adjustment functions so they can be run with one click
 function adjustPolls () {
   adjustFG();
   adjustFF();
@@ -6,25 +6,26 @@ function adjustPolls () {
   adjustSF();
   adjustGP();
   adjustOI();
+  addWeight();
 }
 
-//FUNCTION TO ADJUST SUPPORT FOR FINE GAEL BASED ON POLLSTER//
+//FUNCTION TO ADJUST SUPPORT FOR FINE GAEL BASED ON POLLSTER
 function adjustFG () {
 
-  //define pseudo GAS global variables// 
+  //define pseudo GAS global variables
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var pollsSheet = ss.getSheetByName("polls");
   var supportSheet = ss.getSheetByName("party_support_calculated");
   var lastEntryIndex = pollsSheet.getLastRow();
   
-  //loop through all of the polls entered, and then stop//
+  //loop through all of the polls entered, and then stop
   for(var i = 1; i <= lastEntryIndex; i++) {
   
-    //define local variables for the pollster and Fine Gael support//
+    //define local variables for the pollster and Fine Gael support
     var pollster = pollsSheet.getRange(i, 2, lastEntryIndex-1).getValue();
     var FGValue = pollsSheet.getRange(i, 4).getValue();
     
-    //adjust Fine Gael support based on the pollster, and record value in new column//
+    //adjust Fine Gael support based on the pollster, and record value in new column
     if (pollster == "Behaviour and Attitudes") {
       pollsSheet.getRange(i, 10).setValue(FGValue-(FGValue*0.14));
     } else if (pollster == "Ipsos MRBI") {
@@ -37,10 +38,9 @@ function adjustFG () {
   }
 }
 
-//FUNCTION TO ADJUST SUPPORT FOR FIANNA FAIL BASED ON POLLSTER//
+//FUNCTION TO ADJUST SUPPORT FOR FIANNA FAIL BASED ON POLLSTER
 function adjustFF () {
 
-  //define pseudo GAS global variables  
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var pollsSheet = ss.getSheetByName("polls");
   var supportSheet = ss.getSheetByName("party_support_calculated");
@@ -61,10 +61,9 @@ function adjustFF () {
   }
 }
 
-//FUNCTION TO ADJUST SUPPORT FOR LABOUR BASED ON POLLSTER//
+//FUNCTION TO ADJUST SUPPORT FOR LABOUR BASED ON POLLSTER
 function adjustLab () {
 
-  //define pseudo GAS global variables  
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var pollsSheet = ss.getSheetByName("polls");
   var supportSheet = ss.getSheetByName("party_support_calculated");
@@ -85,10 +84,9 @@ function adjustLab () {
   }
 }
 
-//FUNCTION TO ADJUST SUPPORT FOR SINN FEIN BASED ON POLLSTER//
+//FUNCTION TO ADJUST SUPPORT FOR SINN FEIN BASED ON POLLSTER
 function adjustSF () {
 
-  //define pseudo GAS global variables  
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var pollsSheet = ss.getSheetByName("polls");
   var supportSheet = ss.getSheetByName("party_support_calculated");
@@ -109,10 +107,9 @@ function adjustSF () {
   }
 }
 
-//FUNCTION TO ADJUST SUPPORT GREEN PARTY BASED ON POLLSTER//
+//FUNCTION TO ADJUST SUPPORT GREEN PARTY BASED ON POLLSTER
 function adjustGP () {
 
-  //define pseudo GAS global variables  
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var pollsSheet = ss.getSheetByName("polls");
   var supportSheet = ss.getSheetByName("party_support_calculated");
@@ -133,10 +130,9 @@ function adjustGP () {
   }
 }
 
-//FUNCTION TO ADJUST SUPPORT FOR OTHERS/INDEPENDENTS BASED ON POLLSTER//
+//FUNCTION TO ADJUST SUPPORT FOR OTHERS/INDEPENDENTS BASED ON POLLSTER
 function adjustOI () {
 
-  //define pseudo GAS global variables  
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var pollsSheet = ss.getSheetByName("polls");
   var supportSheet = ss.getSheetByName("party_support_calculated");
@@ -153,6 +149,30 @@ function adjustOI () {
       pollsSheet.getRange(i, 15).setValue(OIValue+(OIValue*0.08))
     } else if (pollster == "Red C") {
       pollsSheet.getRange(i, 15).setValue(OIValue+(OIValue*0.13))
+    };
+  }
+}
+
+//FUNCTION TO ADD PREVIOUSLY CALCULATED WEIGHTS FOR EACH POLLSTER
+function addWeight () {
+  
+  //define pseudo GAS global variables
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var pollsSheet = ss.getSheetByName("polls");
+  var supportSheet = ss.getSheetByName("party_support_calculated");
+  var lastEntryIndex = pollsSheet.getLastRow();
+  
+  //add weighting based on pollster, and record value in new column
+  for(var i = 1; i <= lastEntryIndex; i++) {
+    var pollster = pollsSheet.getRange(i, 2, lastEntryIndex-1).getValue();
+    if (pollster == "Behaviour and Attitudes") {
+      pollsSheet.getRange(i, 18).setValue(4.8);
+    } else if (pollster == "Ipsos MRBI") {
+      pollsSheet.getRange(i, 18).setValue(10.93)
+    } else if (pollster == "Millward Brown") {
+      pollsSheet.getRange(i, 18).setValue(6.53)
+    } else if (pollster == "Red C") {
+      pollsSheet.getRange(i, 18).setValue(2.74)
     };
   }
 }
