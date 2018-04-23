@@ -1,3 +1,4 @@
+//defines global variable to hold colours associated with each party
 var colours = [
   {'color': '#4EB271'},
   {'color': '#F3514E'},
@@ -7,6 +8,7 @@ var colours = [
   {'color': '#3C7CD9'},
 ]
 
+//uses jquery to infinately loop through parties and binds it to html element with class 'party'
 $(function(){
     var names = [
     	'Fianna F&aacute;il',
