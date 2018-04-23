@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <title>Irish Political Parties Polls Tracker</title>
+  <head>
+    <!--optimise for mobile-->
+    <meta name ='viewport' content ='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
+    <meta http-equiv ='X-UA-Compatible' content ='IE=edge,chrome=1'>
+    <meta name ='HandheldFriendly' content ='true'>
+    <meta charset="utf-8">
+    <!--include descriptive metadata-->
+    <meta name ='description' content='Poll tracker for support of Irish political parties'>
+    <meta name ='subject' content='Ireland'>
+    <meta name ='subject' content='Politics'>
+    <meta name ='subject' content='Politics'>
+    <meta name ='author' content='Katherine Riley'>
+    <!--load external stylesheets-->
+    <link href = 'style.css' type = 'text/css' rel = 'stylesheet'/>
+    <link href ="https://fonts.googleapis.com/css?family=VT323|Yantramanav:300,400,500,700|Montserrat:400,500" rel="stylesheet">
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--load JS libraries and external script files-->
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js'></script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript' src='js/tracker-chart.js'></script>
+    <script type='text/javascript' src='js/some-scripts.js'></script>
+    <script type='text/javascript' src='js/data-table.js'></script>
+  </head>
+  <body>
+    <header>
+      <div class='page-logo'>
+          <a href='http://igor.gold.ac.uk/~krile003/ker-portfolio/hire-me-please.html'>igor.kERiley.gold</a>
+      </div>
+      <div class='social-buttons-top'>
+          <a id='twitter-top' class='fa fa-twitter' href='TWITTER SHARE LINK'></a>
+          <a id='facebook-top' class='fa fa-facebook' href='FACEBOOK SHARE LINK'></a>
+          <a id='github-top' class='fa fa-github' href='https://github.com/keriley/irishpolltracker'></a>
+      </div>
+    </header>
+    <h1>How popular is <span class='party'>Fine Gael</span>?</h1>
+    <h2>An updating calculation of the public support for each of the major parties in Irish politics,
+        taking into account the pollster, quality and timing of each poll, designed by <a href='http://igor.gold.ac.uk/~krile003/ker-portfolio/hire-me-please.html'><span class='byline'>
+        KATHERINE RILEY</span></a>. <a class='methodology' href='http://igor.gold.ac.uk/~krile003/irish-poll-tracker/explain.html'>Learn about how this works >></a></h2>
+    <div class='chart-wrapper'>
+      <svg id='tracking-chart' width='960' height='500'></svg>
+    </div>
+    <img id='key' src='parties-key.svg' alt='Key showing Irish parties'>
+    <div class='table-wrapper'>
+      <div id='data-table'></div>
+      <div class='google-sheet-link'>
+        <a href='https://docs.google.com/spreadsheets/d/1ySIfax8AqawiXRl6pFkVx0-NXOiDgO_-NzdBbLVFtBE/edit#gid=0'>
+          Check out the current data set in more depth>></a>
+      </div>
+    <footer>
+      <div class='about-me'>
+          <p>I am currently finishing up an MA/MSc in Digital Journalism at Goldsmiths College, University of London. You can
+            find more work samples on my <a href='http://igor.gold.ac.uk/~krile003/ker-portfolio/hire-me-please.html' style='color: #3C7CD9'>portfolio site</a> and get in touch via email at kteriley@gmail.com. </p>
+      </div>
+      <div class='social-buttons-bottom'>
+          Find me on...
+          <a id='twitter-bottom' class='fa fa-twitter' href='https://twitter.com/KatherineERiley'></a>
+          <a id='instagram-bottom' class='fa fa-instagram' href='https://www.instagram.com/ke.riley/'></a>
+          <a id='github-bottom' class='fa fa-github' href='https://github.com/keriley'></a>
+      </div>
+    </footer>
+  </body>
+</html>
