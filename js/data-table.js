@@ -13,7 +13,7 @@ function drawVisualization() {
     query.send(handleQueryResponse);
 }
 
-//takes data extracted from public spreadsheet, draws table and binds it to html element
+//takes data extracted from public spreadsheet, draws table and binds it to html element 'data-table'
 function handleQueryResponse(response) {
     if (response.isError()) {
         alert('There was a problem with your query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
