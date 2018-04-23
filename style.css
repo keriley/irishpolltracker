@@ -1,0 +1,274 @@
+/* MAIN PAGE CSS */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.3;
+  font-family: 'Yantramanav', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #3C7CD9;
+}
+
+header {
+  display: flex;
+  padding: 10px 30px;
+  border-bottom: 1px solid #000000;
+  justify-content: space-between;
+}
+
+.page-logo {
+  display: flex;
+  font-family: 'VT323', monospace;
+  font-size: 2em;
+}
+
+.social-buttons-top {
+  display: flex;
+  font-size: 1.25em;
+  margin: auto 0;
+}
+
+#twitter-top, #facebook-top, #github-top {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h1 {
+  display: block;
+  font-weight: 700;
+  font-size: 4em;
+  letter-spacing: 2px;
+  max-width: 1000px;
+  height: auto;
+  margin: 40px auto;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.party {
+  color: #3C7CD9;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 500;
+  text-align: center;
+  max-width: 650px;
+  margin: 15px auto;
+}
+
+.byline {
+  font-weight: 700;
+}
+
+.methodology {
+  color: #4EB271;
+}
+
+.google-sheet-link {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.google-sheet-link a {
+  font-size: 1.25em;
+  font-weight: 500;
+  color: #4EB271;
+}
+
+.google-sheet-link a:hover {
+  color: #3C7CD9;
+}
+
+footer {
+  display: flex;
+  padding: 10px 30px;
+  background-color: #000000;
+  justify-content: space-between;
+}
+
+.about-me {
+  color: #ffffff;
+  max-width: 400px;
+  padding-right: 20px;
+}
+
+.social-buttons-bottom {
+  font-size: 1.5em;
+  margin: auto 0;
+  color: #ffffff;
+  padding-left: 20px;
+}
+
+#twitter-bottom:hover, #instagram-bottom:hover, #github-bottom:hover {
+  color: #3C7CD9;
+}
+
+#twitter-bottom, #instagram-bottom, #github-bottom {
+  color: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* D3 CHART CSS */
+
+.chart-wrapper {
+  max-width: 80%;
+  margin: 60px auto 30px;
+}
+
+#tracking-chart {
+  display: block;
+  margin: auto;
+  font-family: 'Yantramanav', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#key {
+  max-width: 700px;
+}
+
+#key {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto 120px;
+
+}
+
+.party-group path.line {
+  fill: none;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+}
+
+.axis {
+  font-family: 'Yantramanav', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+}
+
+.current-support {
+  font-weight: 700;
+}
+
+/* GOOGLE TABLE CSS */
+
+#data-table {
+  max-width: 780px;
+  margin: 0 auto 10px;
+}
+
+.google-visualization-table div {
+  max-width: 780px !important;
+  margin: 0 auto !important;
+}
+
+.google-visualization-table.gradient {
+  background-image: none !important;
+  border-collapse: collapse !important;
+}
+
+.google-visualization-table-table {
+  font-family: 'Yantramanav', sans-serif !important;
+  max-width: 800px !important;
+}
+
+.google-visualization-table-tr-even,
+.google-visualization-table-tr-even td,
+.google-visualization-table-tr-even-nonstrict {
+  background-color: #fff !important;
+  color: #333 !important;
+}
+
+.google-visualization-table-tr-odd,
+.google-visualization-table-tr-odd td,
+.google-visualization-table-tr-odd-nonstrict {
+  background-color: #fff !important;
+  color: #333 !important;
+}
+
+.google-visualization-table-tr-sel,
+.google-visualization-table-tr-sel td,
+.google-visualization-table-tr-sel-nonstrict {
+  background-color: #A0AFBA !important;
+  color: #fff !important;
+}
+
+.google-visualization-table-tr-over,
+.google-visualization-table-tr-over td,
+.google-visualization-table-tr-over-nonstrict {
+  background-color: #A0AFBA !important;
+  color: #fff !important;
+}
+
+.google-visualization-table-th.gradient.unsorted {
+  padding: 10px !important;
+  background-image: none !important;
+  background-color: #fff !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid black !important;
+  font-size: 1.35em;
+}
+
+.google-visualization-table-th-td {
+  border-right: none !important;
+}
+
+.google-visualization-table-td {
+  padding: 10px !important;
+  text-align: left;
+}
+
+.google-visualization-table-td-number {
+  text-align: center !important;
+  border-right: none !important;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #A0AFBA;
+}
+
+::selection {
+  color: #fff;
+  background: #A0AFBA;
+}
+
+/* EXPLAIN.HTML CSS */
+.copy {
+  max-width: 700px;
+  line-height: 1.7;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+.copy a {
+  color: #4EB271;
+}
+
+.copy a:hover {
+  color: #3C7CD9;
+}
+
+h3 {
+  font-size: 1.75em;
+  text-align: center;
+  margin-top: 80px;
+}
+
+h4 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+ul {
+  max-width: 600px;
+}
